@@ -8,7 +8,7 @@ Porting the specfile to Python 3
 
 Applications behave the same when run under Python 2 and Python 3, therefore all you need to do is change the specfile to use Python 3 instead of Python 2.
 
-**In essense the porting of an application RPM consists of simply going through the spec file and substituting the number 2 with number 3 where appropriate.**
+**In essence, the porting of an application RPM consists of simply going through the spec file and substituting the number 2 with number 3 where appropriate.**
 
 So let's take an example spec file and port it to illustrate the process. We start with a spec file for an application using Python 2:
 
@@ -45,7 +45,7 @@ For example, if you find the ``%py2_install`` macro, substitute ``%py3_install``
 
 In the files section you should usually find the ``%{python2_sitelib}`` macro, which you should substitute with ``%{python3_sitelib}``.
 
-Files section also may contain the versioned executable, usually ``%{_bindir}/sample-exec-2.7`` in which case substitute ``%{_bindir}/sample-exec-3.?``.
+The files section also may contain an versioned executable, usually ``%{_bindir}/sample-exec-2.7`` in which case substitute ``%{_bindir}/sample-exec-3.?``.
 
 Diff of the changes
 -------------------
